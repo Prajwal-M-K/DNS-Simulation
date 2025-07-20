@@ -21,11 +21,11 @@ try:
         processes.append(proc)
         time.sleep(0.5)  
 
-    print("✅ All servers started. Press Ctrl+C to stop.")
+    print("All servers started. Press Ctrl+C to stop.")
     for proc in processes:
         proc.wait()
 
 except KeyboardInterrupt:
-    print("\n🛑 Shutting down all servers...")
+    print("\nShutting down all servers...")
     for proc in processes:
         proc.terminate()
